@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soyhan Sigorta | Güven. Koruma. Gelecek.</title>
+    <style>
+        :root {
+            --bg-dark: #0a1128;
+            --bg-card: #121c3d;
+            --accent-blue: #1d4ed8;
+            --accent-cyan: #38bdf8;
+            --accent-green: #25d366;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
+        
+        header { background: rgba(10, 17, 40, 0.95); border-bottom: 1px solid var(--border-color); position: fixed; width: 100%; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; }
+        .logo { font-size: 22px; font-weight: bold; color: var(--text-light); display: flex; flex-direction: column; }
+        .logo span { font-size: 11px; color: var(--accent-cyan); letter-spacing: 2px; }
+        nav a { color: var(--text-light); text-decoration: none; margin-left: 20px; font-size: 14px; transition: 0.3s; }
+        nav a:hover { color: var(--accent-cyan); }
+        .cta-btn { background: var(--accent-blue); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+        .whatsapp-btn { background: var(--accent-green); color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-left: 20px; display: inline-flex; align-items: center; gap: 8px; }
+
+        .hero { padding: 160px 5% 80px; text-align: center; background: linear-gradient(135deg, #0a1128 0%, #172554 100%); }
+        .hero h1 { font-size: 42px; margin-bottom: 20px; color: #fff; }
+        .hero p { font-size: 18px; color: var(--text-muted); max-width: 700px; margin: 0 auto 30px; }
+        .hero-buttons { display: flex; justify-content: center; gap: 20px; align-items: center; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        h2.section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: #fff; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .service-card { background: var(--bg-card); border: 1px solid var(--border-color); padding: 30px; border-radius: 10px; transition: 0.3s; display: flex; flex-direction: column; gap: 15px; }
+        .service-card:hover { transform: translateY(-5px); border-color: var(--accent-cyan); }
+        .service-card h3 { color: var(--accent-cyan); }
+        .service-card p { color: var(--text-muted); font-size: 14px; }
+        .service-card .details-link { color: #fff; text-decoration: none; font-weight: bold; font-size: 14px; align-self: flex-start; }
+
+        .partners-section { background: #070d1f; padding: 40px 20px; text-align: center; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .partners-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; max-width: 1000px; margin: 20px auto 0; }
+        .partner-badge { background: var(--bg-card); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: 20px; font-size: 13px; color: var(--text-muted); }
+
+        .form-section { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; padding: 40px; max-width: 700px; margin: 0 auto; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-size: 14px; color: var(--text-muted); }
+        .form-group input, .form-group select { width: 100%; padding: 12px; background: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 6px; color: white; font-size: 15px; }
+        .form-group input[type="file"] { padding: 8px; }
+        .submit-btn { width: 100%; background: var(--accent-blue); color: white; border: none; padding: 14px; font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background: #1e40af; }
+        .form-actions { display: flex; gap: 15px; margin-top: 20px; }
+        .submit-whatsapp { background: var(--accent-green); color: white; border: none; padding: 14px; font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: 0.3s; flex: 1; }
+        .submit-whatsapp:hover { background: #128c7e; }
+
+        footer { background: #050a18; border-top: 1px solid var(--border-color); padding: 40px 20px; text-align: center; color: var(--text-muted); font-size: 14px; }
+        footer p { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            SOYHAN SİGORTA
+            <span>GÜVEN. KORUMA. GELECEK.</span>
+        </div>
+        <nav>
+            <a href="#anasayfa">Anasayfa</a>
+            <a href="#kurumsal">Kurumsal</a>
+            <a href="#sigortalar">Sigorta Ürünleri</a>
+            <a href="#teklif" class="cta-btn">Teklif Al</a>
+            <a href="https://wa.me/905309618792" class="whatsapp-btn">WhatsApp</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="anasayfa">
+        <h1>25+ Sigorta Şirketiyle Size En Uygun Teklifi Sunuyoruz</h1>
+        <p>Soyhan Sigorta olarak; Trafik, Kasko, Konut, İş Yeri, Sağlık ve tüm sigorta branşlarında en doğru poliçeyi bütçenize uygun olarak buluyoruz.</p>
+        <div class="hero-buttons">
+            <a href="#teklif" class="cta-btn" style="padding: 14px 28px; font-size: 16px;">Ücretsiz Teklif Al</a>
+            <a href="https://wa.me/905309618792" class="whatsapp-btn" style="padding: 14px 28px; font-size: 16px;">WhatsApp'tan İletişim</a>
+        </div>
+    </section>
+
+    <div class="partners-section">
+        <p style="color: var(--accent-cyan); font-weight: bold; margin-bottom: 15px;">25'in Üzerinde Sigorta Şirketi ile Hizmetinizdeyiz</p>
+        <div class="partners-grid">
+            <div class="partner-badge">AK Sigorta</div>
+            <div class="partner-badge">Anadolu Sigorta</div>
+            <div class="partner-badge">Ankara Sigorta</div>
+            <div class="partner-badge">Axa Sigorta</div>
+            <div class="partner-badge">Bereket Sigorta</div>
+            <div class="partner-badge">Corpus Sigorta</div>
+            <div class="partner-badge">Doğa Sigorta</div>
+            <div class="partner-badge">Ema Sigorta</div>
+            <div class="partner-badge">HDI Sigorta</div>
+            <div class="partner-badge">Hepiyi Sigorta</div>
+            <div class="partner-badge">Koru Sigorta</div>
+            <div class="partner-badge">MAPFRE Sigorta</div>
+            <div class="partner-badge">Neova Sigorta</div>
+            <div class="partner-badge">Quick Sigorta</div>
+            <div class="partner-badge">Ray Sigorta</div>
+            <div class="partner-badge">Referans Sigorta</div>
+            <div class="partner-badge">Sompo Sigorta</div>
+            <div class="partner-badge">Şeker Sigorta</div>
+            <div class="partner-badge">Türk Nippon Sigorta</div>
+            <div class="partner-badge">Türkiye Sigorta</div>
+            <div class="partner-badge">Unico Sigorta</div>
+            <div class="partner-badge">Zürich Sigorta</div>
+        </div>
+    </div>
+
+    <div class="container" id="kurumsal">
+        <h2 class="section-title">Kurumsal Tanıtım</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted); font-size: 16px;">
+            Büyükçekmece / İstanbul merkezli Soyhan Sigorta olarak, her bireyin ve kurumun güvenliğini en ön planda tutuyoruz. Geniş sigorta şirketi portföyümüzle tarafsız, hızlı ve şeffaf hizmet sunuyor; tüm sigorta ihtiyaçlarınızda yanınızda yer alıyoruz.
+        </p>
+    </div>
+
+    <div class="container" id="sigortalar">
+        <h2 class="section-title">Sigorta Ürünlerimiz</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🚗 Trafik Sigortası</h3>
+                <p>Aracınızla karıştığınız kazalarda üçüncü şahıslara verebileceğiniz maddi ve bedeni zararları yasal limitler dahilinde güvence altına alır.</p>
+                <a href="#teklif" class="details-link">Detaylı Bilgi & Teklif »</a>
+            </div>
+            <div class="service-card">
+                <h3>🚙 Kasko Sigortası</h3>
+                <p>Olası bir kaza, çarpma, yanma, çalınma veya doğal afetler sonucunda aracınızda meydana gelebilecek hasarları karşılar.</p>
+                <a href="#teklif" class="details-link">Detaylı Bilgi & Teklif »</a>
+            </div>
+            <div class="service-card">
+                <h3>🏠 Konut Poliçesi</h3>
+                <p>Evinizi ve içindeki eşyalarınızı; yangından hırsızlığa, su baskınından depreme kadar pek çok riske karşı koruma altına alır.</p>
+                <a href="#teklif" class="details-link">Detaylı Bilgi & Teklif »</a>
+            </div>
+            <div class="service-card">
+                <h3>🌍 DASK (Zorunlu Deprem)</h3>
+                <p>Depremin ve deprem sonucu meydana gelecek yangın, tsunami veya yer kaymasının doğrudan neden olacağı maddi zararları karşılar.</p>
+                <a href="#teklif" class="details-link">Detaylı Bilgi & Teklif »</a>
+            </div>
+            <div class="service-card">
+                <h3>🏥 Tamamlayıcı Sağlık</h3>
+                <p>SGK güvencesindeki tedavilerinizde, anlaşmalı özel hastanelerdeki fark ücretlerini cebinizden çıkmadan ödemenizi sağlar.</p>
+                <a href="#teklif" class="details-link">Detaylı Bilgi & Teklif »</a>
+            </div>
+            <div class="service-card">
+                <h3>👨‍⚕️ Özel Sağlık Sigortası</h3>
+                <p>Tercih edeceğiniz özel hastane ve hekimlerde, en kaliteli sağlık hizmetine kapsamlı teminatlarla erişmenizi sağlar.</p>
+                <a href="#teklif" class="details-link">Detaylı Bilgi & Teklif »</a>
+            </div>
+            <div class="service-card">
+                <h3>🏢 İş Yeri Sigortaları</h3>
+                <p>İş yerinizin demirbaşlarını, stoklarınızı ve binanızı ticari faaliyetlerinizi aksatabilecek tehlikelere karşı korur.</p>
+                <a href="#teklif" class="details-link">Detaylı Bilgi & Teklif »</a>
+            </div>
+            <div class="service-card">
+                <h3>💊 Eczanem Paketi</h3>
+                <p>Eczanelere özel; ilaç stoklarından eczane ekipmanlarına, üçüncü şahıs ve mesleki sorumluluklara kadar tam kapsamlı güvence sunar.</p>
+                <a href="#teklif" class="details-link">Detaylı Bilgi & Teklif »</a>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 40px; font-weight: bold; color: var(--accent-cyan);">...ve ihtiyacınız olan tüm sigorta çeşitleri ile hizmetinizdeyiz!</p>
+    </div>
+
+    <div class="container" id="teklif">
+        <h2 class="section-title">Hızlı Teklif Al</h2>
+        <div class="form-section">
+            <form action="mailto:soyhansigorta@gmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label>İsim Soyisim</label>
+                    <input type="text" name="İsim_Soyisim" placeholder="Adınız Soyadınız" required>
+                </div>
+                <div class="form-group">
+                    <label>T.C. Kimlik Numarası</label>
+                    <input type="text" name="TC_Kimlik" maxlength="11" placeholder="11 haneli T.C. Kimlik Numaranız" required>
+                </div>
+                <div class="form-group">
+                    <label>Doğum Tarihi</label>
+                    <input type="date" name="Dogum_Tarihi" required>
+                </div>
+                <div class="form-group">
+                    <label>Telefon Numarası</label>
+                    <input type="tel" name="Telefon" placeholder="05XX XXX XX XX" required>
+                </div>
+                <div class="form-group">
+                    <label>E-posta Adresi</label>
+                    <input type="email" name="Eposta" placeholder="ornek@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>İlgilenilen Sigorta Türü</label>
+                    <select name="Sigorta_Turu">
+                        <option value="Trafik Sigortası">Trafik Sigortası</option>
+                        <option value="Kasko Sigortası">Kasko Sigortası</option>
+                        <option value="Konut Poliçesi">Konut Poliçesi</option>
+                        <option value="DASK">DASK</option>
+                        <option value="Tamamlayıcı Sağlık Sigortası">Tamamlayıcı Sağlık Sigortası</option>
+                        <option value="Özel Sağlık Sigortası">Özel Sağlık Sigortası</option>
+                        <option value="İş Yeri Sigortaları">İş Yeri Sigortaları</option>
+                        <option value="Eczanem Paketi">Eczanem Paketi</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ruhsat Fotoğrafı (Kasko / Trafik için)</label>
+                    <input type="file" name="Ruhsat_Fotografi">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Teklifi E-posta İle İlet</button>
+                    <a href="https://wa.me/905309618792" class="submit-whatsapp" style="text-align: center; text-decoration: none; padding: 14px; display: block; flex: 1;">Teklifi WhatsApp İle İlet</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>SOYHAN SİGORTA</strong> - Yetkili: Orhan KAHRAMAN</p>
+        <p>Telefon / WhatsApp: 0530 961 87 92 | E-posta: soyhansigorta@gmail.com</p>
+        <p>Instagram & Facebook: @soyhansigorta</p>
+        <p>Adres: Büyükçekmece / İstanbul</p>
+        <p style="margin-top: 20px; font-size: 12px;">© 2026 Soyhan Sigorta. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
